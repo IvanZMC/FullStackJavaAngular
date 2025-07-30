@@ -14,8 +14,8 @@ public class MyConfig {
     @Bean
     public UserDetailsService userDetailsService(){
         UserDetails userDetails = User.builder()
-                .username("rahul")
-                .password(passwordEncoder().encode("Password"))
+                .username("admin")
+                .password(passwordEncoder().encode("password"))
                 .roles("admin")
                 .build();
         return new InMemoryUserDetailsManager(userDetails);
