@@ -12,16 +12,16 @@
 
 Aplicación full-stack de e-commerce desarrollada con Java y Angular. El sistema permite experiencia de compra para clientes, autenticación segura. 
 
-## ✅ Funcionalidades principales
+## ✅ Aspectos principales
 
 ### 🔧 Back-end (Spring Boot)
 - Estructura modular con servicios, controladores y repositorios
 - Pager
-- CRUD de productos y tipos
 - Registro y login de usuarios con JWT (Stateless)
 - Seguridad de endpoints con Spring Security
 - Manejo de roles (ADMIN, USER)
 - Persistencia de datos con Spring Data JPA
+- Caché Cart management con Redis
 
 ### 🎨 Front-end (Angular)
 - Interfaz de usuario responsive con Bootstrap
@@ -29,8 +29,12 @@ Aplicación full-stack de e-commerce desarrollada con Java y Angular. El sistema
 - Formularios reactivos
 - Carrito de compras
 - Registro e inicio de sesión de usuarios
-- Protección de rutas mediante guardas
+- Protección de rutas mediante guards
 - Componentes modulares
+- Emisores de Eventos
+- Subscripciones y Behavior Subject
+- Landing Page
+- LocalStorage for cart
 
 ## 🧩 Estructura del proyecto
 
@@ -51,11 +55,11 @@ src/
 ```
 src/
 ├── app
-│   ├── components
-│   ├── services
-│   ├── models
+│   ├── pages**
+│   ├── core**
+│   ├── shared
 │   ├── guards
-│   └── modules
+│   └── assests
 ```
 
 ## 📈 Flujo de la aplicación
@@ -63,23 +67,8 @@ src/
 1. El cliente accede a la aplicación web y navega entre productos.
 2. Puede registrarse e iniciar sesión.
 3. Una vez autenticado, puede agregar productos al carrito y realizar pedidos.
-4. Los usuarios con rol ADMIN pueden crear, actualizar o eliminar productos y categorías.
 
-## 🛠️ Instalación local
-
-### Backend
-```bash
-cd springboot-backend
-./mvnw spring-boot:run
-```
-
-### Frontend
-```bash
-cd angular-frontend
-npm install
-ng serve
-```
 
 ## 📌 Estado del proyecto
 
-✅ Proyecto completo y funcional – se incluyen funcionalidades básicas de un e-commerce moderno con autenticación, roles y diseño responsive.
+- Proyecto funcional, se incluyen funcionalidades básicas de un e-commerce moderno con autenticación, roles y diseño responsive.
